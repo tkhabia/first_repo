@@ -22,7 +22,7 @@ int main(){
 						pos1= x[i];
 						pos2 = y[i];
 						}
-						printf("asljfl \n");
+						// printf("asljfl \n");
 					}else{
 						pos1= x[i];
 						pos2 = y[i];
