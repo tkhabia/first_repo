@@ -10,9 +10,9 @@ int main(){
 	scanf("%d", &q);
 	while(q--){
 		scanf("%s %d %d",a,&X,&Y);
-		// printf("slakjdfl\n");
+		min= 9999999;
 		if(strcmp(a,c)== 0){
-			for (int i = 0; i <= count; ++i)
+			for (int i = 0; i < count; ++i)
 			{ 
 				// printf("%d\n", min);
 				if(abs(x[i] - X) + abs(y[i] -Y) <= min){
@@ -23,14 +23,20 @@ int main(){
 						pos2 = y[i];
 						}
 						// printf("asljfl \n");
-					}else{
+					}
+					else
+					{
 						pos1= x[i];
 						pos2 = y[i];
+						// printf("FJLK\n");
 					}
-					min = abs(x[i] - X)+abs(y[i] -Y);
-					// printf("2- %d 1- %d min %d\n", pos2, pos1,min);
 					
-				}	
+					min = abs(x[i] - X)+abs(y[i] -Y);
+					
+				}else {	continue;}
+
+
+					printf("1- %d 2- %d min %d %d\n", pos1, pos2,abs(x[i] - X) + abs(y[i] -Y), min);
 			}
 			if(count != 0){
 			printf("%d %d\n",pos1,pos2);
@@ -39,7 +45,9 @@ int main(){
 				printf("-1 -1\n");	
 		}else {
 			x[count]= X;
-			y[count++]= Y;
+			y[count]= Y;
+			count++;
+			// printf("fljads  %d\n", count);
 		}
 
 	}
